@@ -1,0 +1,64 @@
+<body [class]="setBodyClass()">
+    <!-- Main navbar -->
+    <app-header [hidden]="!displayLayout()"></app-header>
+    <!-- /main navbar -->
+
+
+    <!-- Page container -->
+    <div class="page-container">
+
+        <!-- Page content -->
+        <div class="page-content">
+
+            <!-- Main sidebar -->
+            <div class="sidebar sidebar-main" *ngIf="displayLayout()">
+                <div class="sidebar-content">
+
+                    <!-- User menu -->
+                    <app-user-menu></app-user-menu>
+                    <!-- /user menu -->
+
+
+                    <!-- Main navigation -->
+                    <app-aside></app-aside>
+                    <!-- /main navigation -->
+
+                </div>
+            </div>
+            <!-- /main sidebar -->
+
+
+            <!-- Main content -->
+            <div class="content-wrapper">
+
+                <!-- Page header -->
+                <app-page-header [hidden]="!displayLayout()"></app-page-header>
+                <!-- /page header -->
+
+
+                <!-- Content area -->
+                <div class="content">
+
+                    <!-- Dashboard content -->
+                    <router-outlet></router-outlet>
+                    <!-- /dashboard content -->
+
+                    <!-- Footer -->
+                    <app-footer [hidden]="!displayLayout()"></app-footer>
+                    <!-- /footer -->
+
+                </div>
+                <!-- /content area -->
+
+            </div>
+            <!-- /main content -->
+
+        </div>
+        <!-- /page content -->
+
+    </div>
+    <!-- /page container -->
+</body>
+
+
+

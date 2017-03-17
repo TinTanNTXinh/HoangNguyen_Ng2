@@ -1,0 +1,79 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "project": {
+    "name": "ng2new"
+  },
+  "apps": [
+    {
+      "root": "src",
+      "outDir": "dist",
+      "assets": [
+        "assets",
+        "favicon.ico"
+      ],
+      "index": "index.html",
+      "main": "main.ts",
+      "polyfills": "polyfills.ts",
+      "test": "test.ts",
+      "tsconfig": "tsconfig.app.json",
+      "testTsconfig": "tsconfig.spec.json",
+      "prefix": "app",
+      "styles": [
+        "assets/fonts-googleapis.css",
+        "assets/css/icons/icomoon/styles.css",
+        "assets/css/bootstrap.css",
+        "assets/css/core.css",
+        "assets/css/components.css",
+        "assets/css/colors.css",
+        "styles.css"
+      ],
+      "scripts": [
+        "assets/js/plugins/loaders/pace.min.js",
+        "assets/js/core/libraries/jquery.min.js",
+        "assets/js/core/libraries/bootstrap.min.js",
+        "assets/js/plugins/loaders/blockui.min.js",
+
+        "assets/js/plugins/visualization/d3/d3.min.js",
+        "assets/js/plugins/visualization/d3/d3_tooltip.js",
+        "assets/js/plugins/forms/styling/switchery.min.js",
+        "assets/js/plugins/forms/styling/uniform.min.js",
+        "assets/js/plugins/forms/selects/bootstrap_multiselect.js",
+        "assets/js/plugins/ui/moment/moment.min.js",
+        "assets/js/plugins/pickers/daterangepicker.js",
+
+        "assets/js/core/app.js",
+        "global.js"
+      ],
+      "environmentSource": "environments/environment.ts",
+      "environments": {
+        "dev": "environments/environment.ts",
+        "prod": "environments/environment.prod.ts"
+      }
+    }
+  ],
+  "e2e": {
+    "protractor": {
+      "config": "./protractor.conf.js"
+    }
+  },
+  "lint": [
+    {
+      "project": "src/tsconfig.app.json"
+    },
+    {
+      "project": "src/tsconfig.spec.json"
+    },
+    {
+      "project": "e2e/tsconfig.e2e.json"
+    }
+  ],
+  "test": {
+    "karma": {
+      "config": "./karma.conf.js"
+    }
+  },
+  "defaults": {
+    "styleExt": "css",
+    "component": {}
+  }
+}

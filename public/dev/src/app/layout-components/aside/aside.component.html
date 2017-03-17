@@ -1,0 +1,47 @@
+<!-- Main navigation -->
+<div class="sidebar-category sidebar-category-visible">
+    <div class="category-content no-padding">
+        <ul class="navigation navigation-main navigation-accordion">
+
+            <!-- Main -->
+            <li class="navigation-header"><span>Main</span> <i class="icon-menu" title="Main pages"></i></li>
+            <li *ngFor="let role of sliceRoles(1)" routerLinkActive="active">
+                <a [routerLink]="role.router_link">
+                    <!--<i class="glyphicon {{ role.icon_name }}"></i>-->
+                    <i class="icon-home4"></i>
+                    <span>{{ role.description }}</span>
+                </a>
+            </li>
+            <li>
+                <a><i class="icon-stack2"></i> <span>Dữ liệu ban đầu</span></a>
+                <ul>
+                    <li *ngFor="let role of sliceRoles(2)" routerLinkActive="active">
+                        <a [routerLink]="role.router_link">{{ role.description }}</a>
+                    </li>
+                    <li class="navigation-divider"></li>
+                </ul>
+            </li>
+            <li>
+                <a><i class="icon-vcard"></i> <span>Giao dịch</span></a>
+                <ul>
+                    <li *ngFor="let role of sliceRoles(3)" routerLinkActive="active">
+                        <a [routerLink]="role.router_link">{{ role.description }}</a>
+                    </li>
+                    <li class="navigation-divider"></li>
+                </ul>
+            </li>
+            <li>
+                <a><i class="icon-graph"></i> <span>Báo cáo</span></a>
+                <ul>
+                    <li *ngFor="let role of sliceRoles(4)" routerLinkActive="active">
+                        <a [routerLink]="role.router_link">{{ role.description }}</a>
+                    </li>
+                    <li class="navigation-divider"></li>
+                </ul>
+            </li>
+            <!-- /page kits -->
+
+        </ul>
+    </div>
+</div>
+<!-- /main navigation -->

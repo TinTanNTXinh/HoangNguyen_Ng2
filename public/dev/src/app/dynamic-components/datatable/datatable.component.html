@@ -1,0 +1,16 @@
+<input type="text" class="form-control rounded" *ngIf="enableFilter" [(ngModel)]="query" (keydown.enter)="filter()" placeholder="Tìm kiếm">
+<br>
+<div class="table-responsive">
+    <table class="table table-striped b-t b-b">
+        <thead>
+        <tr>
+            <th *ngFor="let column of columns">{{column.header}}</th>
+        </tr>
+        </thead>
+        <tbody *ngFor="let row of dataset">
+        <tr>
+            <td *ngFor="let column of columns">{{row[column.value]}}</td>
+        </tr>
+        </tbody>
+    </table>
+</div>
